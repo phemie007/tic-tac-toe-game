@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>TicTacToe Game</title>
+</head>
+<body>
+
+	<a href="tttgame.html"><button>Home</button></a>
+
+	<br><br>
+
+	<table id="tab" style="background-color: yellow; border-style: solid; margin-left: 200px; margin-top: 10px; font-weight: bolder; font-family: cursive; font-size: 40px;">
+		
+	<tr>
+		<td style="height: 100px; width: 100px; border: solid black; text-align: center;" id="tr11" onclick="push(event)">1</td>
+		<td style="height: 100px; width: 100px; border: solid black; text-align: center; " id="tr12" onclick="push(event)">2</td>
+		<td style="height: 100px; width: 100px; border: solid black; text-align: center;" id="tr13" onclick="push(event)">3</td>
+		</tr>
+
+
+	<tr>
+		<td style="height: 100px; width: 100px; border: solid black; text-align: center;" id="tr21" onclick="push(event)">4</td>
+		<td style="height: 100px; width: 100px; border: solid black; text-align: center;" id="tr22" onclick="push(event)">5</td>
+		<td style="height: 100px; width: 100px; border: solid black; text-align: center;" id="tr23" onclick="push(event)">6</td>
+	</tr>
+
+
+	<tr>
+		<td style="height: 100px; width: 100px; border: solid black; text-align: center;" id="tr31" onclick="push(event)">7</td>
+		<td style="height: 100px; width: 100px; border: solid black; text-align: center;" id="tr32" onclick="push(event)">8</td>
+		<td style="height: 100px; width: 100px; border: solid black; text-align: center;" id="tr33" onclick="push(event)">9</td>
+		</tr>
+
+	</table><br>
+
+
+	<input type="button" name="" value="player 1" style="margin-left: 200px;" onclick="but('xx')">
+	<input type="button" name="" value="player 2" onclick="but('yy')">
+
+
+
+	<script type="text/javascript">
+		
+		var hi;
+		function but(b){
+		 hi = b;
+
+		
+		}
+
+		function push(a){
+
+			
+			if ( hi == 'xx'){
+				alert('Player 2 plays next')
+				a.target.innerHTML = 'xx';
+			}
+
+			else if (hi == 'yy'){
+				alert('Player 1 plays next')
+				a.target.innerHTML = 'yy';
+			}
+		
+
+		if ((tr11.innerHTML == 'xx' && tr12.innerHTML == 'xx' && tr13.innerHTML == 'xx') ||
+			(tr21.innerHTML == 'xx' && tr22.innerHTML == 'xx' && tr23.innerHTML == 'xx') ||
+			(tr31.innerHTML == 'xx' && tr32.innerHTML == 'xx' && tr33.innerHTML == 'xx') ||
+			(tr13.innerHTML == 'xx' && tr22.innerHTML == 'xx' && tr31.innerHTML == 'xx') ||
+			(tr11.innerHTML == 'xx' && tr22.innerHTML == 'xx' && tr33.innerHTML == 'xx') ||
+			(tr12.innerHTML == 'xx' && tr22.innerHTML == 'xx' && tr32.innerHTML == 'xx') ||
+			(tr11.innerHTML == 'xx' && tr21.innerHTML == 'xx' && tr31.innerHTML == 'xx') ||
+			(tr13.innerHTML == 'xx' && tr23.innerHTML == 'xx' && tr33.innerHTML == 'xx')){
+				tab.innerHTML = 'Player 1 wins';}
+		
+	else if((tr11.innerHTML == 'yy' && tr12.innerHTML == 'yy' && tr13.innerHTML == 'yy') ||
+			(tr21.innerHTML == 'yy' && tr22.innerHTML == 'yy' && tr23.innerHTML == 'yy') ||
+			(tr31.innerHTML == 'yy' && tr32.innerHTML == 'yy' && tr33.innerHTML == 'yy') ||
+			(tr13.innerHTML == 'yy' && tr22.innerHTML == 'yy' && tr31.innerHTML == 'yy') ||
+			(tr11.innerHTML == 'yy' && tr22.innerHTML == 'yy' && tr33.innerHTML == 'yy') ||
+			(tr12.innerHTML == 'yy' && tr22.innerHTML == 'yy' && tr32.innerHTML == 'yy') ||
+			(tr11.innerHTML == 'yy' && tr21.innerHTML == 'yy' && tr31.innerHTML == 'yy') ||
+			(tr13.innerHTML == 'yy' && tr23.innerHTML == 'yy' && tr33.innerHTML == 'yy')){
+				tab.innerHTML = 'Player 2 wins';}
+		}	
+	</script>
+
+
+</body>
+</html>
